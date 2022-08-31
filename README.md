@@ -1,4 +1,4 @@
-# news-backend
+# Facebok News Feed like Backend
 ## Installation
   Use the package manager [npm] to install.
   ```bash
