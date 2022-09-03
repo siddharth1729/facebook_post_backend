@@ -5,13 +5,15 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+
+const databaseconnection = require("./db");
 dotenv.config();
 
 //DEFINIG PORT
 const PORT = 3333;
 
 //Creating our server
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   const response = {
     success: true,
     message: "Give me a bottle of rum!",
@@ -20,6 +22,8 @@ app.get("/", (req, res) => {
   res.status(200).json(response);
 });
 
+const dbstatus = databaseconnection();
+console.log(dbstatus);
 try {
   app.listen(PORT);
   console.log("\n========================================");
