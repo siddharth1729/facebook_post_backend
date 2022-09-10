@@ -17,7 +17,7 @@ module.exports = databaseconnection = () => {
     mongoose
       .connect(uri, connectionParams)
       .then(() => {
-        console.log("Connected to database ");
+        console.log("Connected to database suscessfully");
       })
       .catch((err) => {
         console.error(`Error connecting to the database. \n${err}`);

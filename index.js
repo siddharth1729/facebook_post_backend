@@ -12,8 +12,8 @@ dotenv.config();
 //DEFINIG PORT
 const PORT = 3333;
 
-//Creating our server
-app.use("/", (req, res) => {
+//Creating our server for testing
+app.get("/", (req, res) => {
   const response = {
     success: true,
     message: "Give me a bottle of rum!",
@@ -23,7 +23,7 @@ app.use("/", (req, res) => {
 });
 
 const dbstatus = databaseconnection();
-console.log(dbstatus);
+
 try {
   app.listen(PORT);
   console.log("\n========================================");
