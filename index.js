@@ -5,6 +5,7 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const register = require("./routes/post");
 
 const databaseconnection = require("./db");
 dotenv.config();
@@ -32,3 +33,7 @@ try {
 } catch (error) {
   console.error(error);
 }
+
+//   ROUTES
+
+app.use("/api/register", register);

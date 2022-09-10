@@ -4,7 +4,7 @@
   "description": "Facebook news feed bakend design ",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "siddharth pandey",
   "license": "ISC",
