@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const register = require("./routes/post");
+const media = require("./routes/media");
 
 const databaseconnection = require("./db");
 dotenv.config();
@@ -37,3 +38,4 @@ try {
 //   ROUTES
 
 app.use("/api/register", register);
+app.use("/api/media", media);
